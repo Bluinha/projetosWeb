@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title> winxClub abertura AMV </title>
+        <link rel="icon" type="image/x-icon" href="imagens/winx-club-vector-logo.ico">
+        <style>
+            body{
+                background-image: url(imagens/fundo.jpg);
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            iframe{
+                height: 600px;
+                width: 600px;
+                border: none;
+                box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5); 
+                /*habilita transição com efeito blur no iframe*/
+                transition: filter 0.4s ease-in-out; 
+                transform-origin: center;
+            }
+            audio {
+                margin-bottom: 20px; /*cria um espaço entre o final do site e o audio*/
+            }
+ 
+        </style>
+    </head>
+    <body>
+        <iframe id= "meuIframe" src="pag1.html" title="bloom pagina"></iframe>
+        <audio id="musica" muted autoplay controls>
+            <source src="winxabertura.mp3" type="audio/mpeg">
+        </audio>
+        <script>
+             const iframe = document.getElementById("meuIframe");
+             const audio = document.getElementById("musica");
+
+             const trocas = [
+            { tempo: 0, pagina: "pag1.html" },
+            { tempo: 5, pagina: "pag2.html" },
+            { tempo: 14, pagina: "pag3.html" },
+            { tempo: 22, pagina: "pag4.html" },
+            { tempo: 27, pagina: "pag5.html" },
+            { tempo: 32, pagina: "pag6.html" },
+            { tempo: 40, pagina: "pag7.html" },
+            { tempo: 47, pagina: "pag2.html" },
+            { tempo: 56, pagina: "pag8.html" },
+            { tempo: 61, pagina: "pag9.html" },
+            { tempo: 64, pagina: "pag10.html" },
+            { tempo: 76, pagina: "pag11.html" },
+            { tempo: 82, pagina: "pag12.html" }
+            ];
+
+            let proximaTroca = 0; //contador de trocas
+
+            function trocarPaginaComBlur(novaPagina) {
+            iframe.style.filter = "blur(8px)";
+                setTimeout(() => {
+                    iframe.src = novaPagina;//muda de pagina
+                    //seta para que o efeito só ative quando um novo conteudo for carregado
+                    iframe.onload = () => { 
+                        iframe.style.filter = "blur(0)";
+                    };
+                }, 400); //tempo de delay 0.4 segundos
+            }
+
+            setInterval(() => {
+            const tempoAtual = audio.currentTime;
+
+            if (proximaTroca < trocas.length && tempoAtual >= trocas[proximaTroca].tempo) {
+                trocarPaginaComBlur(trocas[proximaTroca].pagina);
+                proximaTroca++;
+            }
+            }, 500); // checa a cada meio segundo
+
+        </script>
+    </body>
+</html>

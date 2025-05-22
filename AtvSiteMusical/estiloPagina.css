@@ -1,0 +1,41 @@
+ /*estilo das paginas que serao trocadas css*/
+ * { 
+    /*padroniza o tamanho das paginas no iframe:*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    /*garante que o conteúdo da página não exceda o iframe*/
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+} 
+body{
+    height: 600px; /*o corpo deve tem a mesma altura do iframe*/
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
+}
+table {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover
+}
+td{
+    text-align: center;
+    vertical-align: middle;
+}
+p{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 20px;
+}
