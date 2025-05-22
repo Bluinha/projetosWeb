@@ -1,0 +1,14 @@
+body{
+    background-color: #02043f;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;/*empilha o conteúdo*/
+    align-items: center;
+}
+img{
+    max-width: 90vw;        
+    max-height: 80vh;
+    object-fit: contain;     /* Mantém proporção sem cortar */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <meta charset="utf-8">
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+            body{
+                background-color: #5e49e2;
+            }
+            h1{
+                font-family: 'Mogra';
+                color: white;
+                
+            }
+            button{
+                display: block;
+                width: 100%;
+                padding: 5px;
+                margin-bottom: 10px;
+                font-family: monospace;
+                font-size: 16px;
+                background-color: #06299d;
+                color: white;
+                border: none;
+                border-radius: 12px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Toca da HQ &#128007;</h1>
+
+        <button onclick="mudarCatalogo('pag1.html')">Revista 01 </button>
+        <button onclick="mudarCatalogo('pag2.html')">Revista 02</button>
+        <button onclick="mudarCatalogo('pag3.html')">Revista 03</button>
+        <button onclick="mudarCatalogo('pag4.html')">Revista 04 </button>
+        <button onclick="mudarCatalogo('pag5.html')">Revista 05</button>
+        <button onclick="mudarCatalogo('pag6.html')">Revista 06</button>
+        <button onclick="mudarCatalogo('pag7.html')">Revista 07 </button>
+        <button onclick="mudarCatalogo('pag8.html')">Revista 08</button>
+        <button onclick="mudarCatalogo('pag9.html')">Revista 09</button>
+        <button onclick="mudarCatalogo('pag10.html')">Revista 10 </button>
+        <button onclick="mudarCatalogo('pag11.html')">Revista 11</button>
+        <button onclick="mudarCatalogo('pag12.html')">Revista 12</button>
+
+        <script>
+            function mudarCatalogo(pagina) {
+                parent.document.getElementById('catalogo').src = pagina;
+            }
+        </script>
+    </body>
+</html>
