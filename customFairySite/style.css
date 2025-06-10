@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+:root{
+    --Main-font: "Pixelify Sans", sans-serif;
+    --background-color: #fed9bc;
+    --shadow-color: #f7b1c6;
+    --border-color: #4aafe5 ;
+    --darker-border: #2a65b6;
+    --fill-color: #a3c8ff;
+}
+
+
+body{
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /*hiddes the rest of the website, leaving just the window*/
+    background-color: var(--background-color);
+    /*background-image: url(imgs/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+
+.window{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 10px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 10px  20px 0px var(--shadow-color);
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+header{
+    font-family: "Pixelify Sans", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    background-color: var(--border-color);
+    width: 100%;
+    height: 30px;
+    margin: 0px;
+}
+
+button{
+    height: 30px;
+    width: auto;
+    font-family: var(--Main-font);
+    color: white;
+    background-color: var(--fill-color);
+    cursor: pointer;
+    border-color: var(--darker-border);
+    border-radius: 10px;
+
+}
+
+button:active {
+    transform: translateY(3px); /* Move o botão ligeiramente para baixo quando clicado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para o efeito "afundado" */
+    background-color: var(--shadow-color); /* Muda a cor de fundo quando clicado */
+}
+
+button:hover {
+    background-color: var(--shadow-color); /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+nav{
+    padding: 10px;
+}
+
+.character{
+    position: relative;
+}
+
+.character img{
+    width: 200px;
+    height: 250px;
+}
+
+.sprite-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 250px;
+}
+
+.preview-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.preview-section button{
+    height: 50px;
+    width: 50px;
+}
+
+
+.select-box div{
+    display:none;
+}
+
+.select-box img{
+    object-fit: cover;
+    width: 30px;
+    height: 30px;
+    border: 5px solid var(--fill-color);
+    padding:5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:5px;
+}
+
+audio {
+    display: none;
+}
+
+.audio-button{
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+#audio-button-on{
+    position: absolute;
+    display: none;
+}

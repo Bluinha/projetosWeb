@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>DressFairy.exe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="bg-music" src="dressUp-music.mp3" preload="auto" loop autoplay></audio>
+    <img id="audio-button-off" class="audio-button" src="imgs/audio-button-off.png" alt="audio button off">
+    <img id="audio-button-on" class="audio-button" src="imgs/audio-button-on.png" alt="audio button on">
+    <div class="window">
+
+        <header>
+          ⊹˚ Monte sua fada! ⊹˚
+        </header>
+
+        <div class="preview-section">
+            <audio id="click-sound" src="click-sound.mp3" preload="auto"></audio>
+            <button id="left"> < </button>
+            <div class="character">
+                <img src="imgs/idle-sprite.png" alt="idleImg" id="skin-layer">
+                <img src="imgs/empty-sprite.png" id="eyes-layer" class="sprite-layer">
+                <img src="imgs/empty-sprite.png" id="wings-layer" class="sprite-layer">
+                <img src="imgs/empty-sprite.png" id="hair-layer" class="sprite-layer">
+                <img src="imgs/empty-sprite.png" id="clothes-layer" class="sprite-layer">
+            </div>
+            <button id="right"> > </button>
+        </div>
+
+        <nav>
+            <button id="eyes">Olhos</button>
+            <button id="hair">cabelo</button>
+            <button id="clothes">Roupa</button>
+            <button id="wings">Asas</button>
+        </nav>
+
+        <div class="select-box">
+
+            <div class="option-section" id="eyes-options">
+                <img src="imgs/eyes/black-icon.png" alt="black">
+                <img src="imgs/eyes/blue-icon.png" alt="blue">
+                <img src="imgs/eyes/green-icon.png" alt="green">
+                <img src="imgs/eyes/brown-icon.png" alt="brown">
+            </div>
+
+            <div class="option-section" id="hair-options">
+                <img src="imgs/hair/hair01.png" alt="hair1">
+                <img src="imgs/hair/hair02.png" alt="hair2">
+                <img src="imgs/hair/hair03.png" alt="hair3">
+                <img src="imgs/hair/hair04.png" alt="hair4">
+                <img src="imgs/hair/hair05.png" alt="hair5">
+            </div>
+
+            <div class="option-section" id="clothes-options">
+                <img src="imgs/clothes/clothe1.png" alt="clothes1">
+                <img src="imgs/clothes/clothe2.png" alt="clothes2">
+                <img src="imgs/clothes/clothe3.png" alt="clothes3">
+                <img src="imgs/clothes/clothe4.png" alt="clothes4">
+                <img src="imgs/clothes/clothe5.png" alt="clothes5">
+            </div>
+
+            <div class="option-section" id="wings-options">
+                <img src="imgs/wings/wing1.png" alt="wings1">
+                <img src="imgs/wings/wing2.png" alt="wings2">
+                <img src="imgs/wings/wing3.png" alt="wings3">
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
